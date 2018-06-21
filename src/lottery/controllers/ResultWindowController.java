@@ -19,10 +19,10 @@ public class ResultWindowController {
 
         lotteryName.setText(MainWindowController.lotteryNameString);
 
-        winners.appendText("Asıl Kazananlar\n");
+        winners.appendText("Asıl Talihliler\n");
         winners.appendText("-------------------------------------------------\n");
         winners.appendText(String.valueOf(MainWindowController.result)+"\n\n");
-        winners.appendText("Yedek Kaznanlar\n");
+        winners.appendText("Yedek Talihliler\n");
         winners.appendText("-------------------------------------------------\n");
         winners.appendText(String.valueOf(MainWindowController.backupResult));
         MainWindowController.result.setLength(0);
@@ -38,7 +38,7 @@ public class ResultWindowController {
 
     public void copy(ActionEvent actionEvent) {
         ClipboardContent content = new ClipboardContent();
-        content.putString(String.valueOf(MainWindowController.result));
+        content.putString(winners.getText());
         Clipboard.getSystemClipboard().setContent(content);
     }
 }
