@@ -16,6 +16,7 @@ public class Main extends Application {
         AnchorPane pane = loader.load();
 
         Scene scene = new Scene(pane);
+        scene.getStylesheets().add("lottery/style.css");
         primaryStage.setScene(scene);
 
         primaryStage.setTitle("Çekiliş");

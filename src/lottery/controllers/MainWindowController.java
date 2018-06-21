@@ -91,6 +91,7 @@ public class MainWindowController {
             AnchorPane pane = loader.load();
 
             Scene scene = new Scene(pane);
+            scene.getStylesheets().add("lottery/style.css");
 
             Stage resultStage = new Stage();
             resultStage.setScene(scene);
