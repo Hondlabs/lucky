@@ -19,11 +19,12 @@ import java.util.Random;
 public class MainWindowController {
 
 
-    @FXML public ImageView closeBtn;
-    @FXML public TextField newUser;
-    @FXML public TextField name;
-    @FXML public TextField winnerNumber;
-    @FXML public TextField backupNumber;
+    @FXML private ImageView closeBtn;
+    @FXML private TextField newUser;
+    @FXML private TextField name;
+    @FXML private TextField winnerNumber;
+    @FXML private TextField backupNumber;
+    @FXML private ImageView minBtn;
     @FXML private TextArea userList;
 
     public static StringBuilder result = new StringBuilder();
@@ -98,6 +99,12 @@ public class MainWindowController {
     protected void handleClose() {
         Stage stage = (Stage) closeBtn.getScene().getWindow();
         stage.close();
+    }
+    @FXML
+    protected void handleMinified(){
+
+        Stage stage = (Stage) minBtn.getScene().getWindow();
+        stage.setIconified(true);
     }
 
 

@@ -26,9 +26,9 @@
          </Label>
          <HBox>
             <children>
-               <ImageView fitHeight="22.0" fitWidth="22.0">
+               <ImageView fx:id="minBtn" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#handleMinified">
                   <image>
-                     <Image url="@../../minimize.png" />
+                     <Image url="@../assets/minimize.png" />
                   </image>
                   <cursor>
                      <Cursor fx:constant="HAND" />
@@ -36,14 +36,20 @@
                   <effect>
                      <Glow />
                   </effect>
+                  <HBox.margin>
+                     <Insets right="4.0" top="4.0" />
+                  </HBox.margin>
                </ImageView>
-               <ImageView fx:id="closeBtn" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#handleClose">
+               <ImageView fx:id="closeBtn" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#handleClose">
                   <image>
-                     <Image url="@../../close.png" />
+                     <Image url="@../assets/close.png" />
                   </image>
                   <cursor>
                      <Cursor fx:constant="HAND" />
                   </cursor>
+                  <HBox.margin>
+                     <Insets right="4.0" top="4.0" />
+                  </HBox.margin>
                </ImageView>
             </children>
          </HBox>

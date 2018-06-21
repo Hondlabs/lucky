@@ -14,6 +14,7 @@ public class ResultWindowController {
     @FXML public ImageView closeBtn;
     @FXML public TextArea winners;
     @FXML public Text lotteryName;
+    public ImageView minBtn;
 
     public void initialize(){
 
@@ -34,6 +35,12 @@ public class ResultWindowController {
 
         Stage stage = (Stage) closeBtn.getScene().getWindow();
         stage.close();
+    }
+    @FXML
+    protected void handleMinified(){
+
+        Stage stage = (Stage) minBtn.getScene().getWindow();
+        stage.setIconified(true);
     }
 
     public void copy(ActionEvent actionEvent) {
