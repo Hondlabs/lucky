@@ -68,7 +68,7 @@ public class MainWindowController {
                 if (!winners.contains(line[ranNumber]) && !backupWinners.contains(line[ranNumber])) {
                     backupWinners.add(line[ranNumber]);
 
-                    backupResult.append(winners.get(i)).append("\n");
+                    backupResult.append(backupWinners.get(i)).append("\n");
                 } else {
                     i--;
                 }

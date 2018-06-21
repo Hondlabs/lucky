@@ -19,9 +19,11 @@ public class ResultWindowController {
 
         lotteryName.setText(MainWindowController.lotteryNameString);
 
-        winners.appendText("Asıl Kaznanlar\n");
+        winners.appendText("Asıl Kazananlar\n");
+        winners.appendText("-------------------------------------------------\n");
         winners.appendText(String.valueOf(MainWindowController.result)+"\n\n");
         winners.appendText("Yedek Kaznanlar\n");
+        winners.appendText("-------------------------------------------------\n");
         winners.appendText(String.valueOf(MainWindowController.backupResult));
         MainWindowController.result.setLength(0);
     }
