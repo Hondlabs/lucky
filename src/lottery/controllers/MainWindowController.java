@@ -51,7 +51,7 @@ public class MainWindowController {
         int winnerSize = Integer.parseInt(winnerNumber.getText());
         int backupSize = Integer.parseInt(backupNumber.getText());
 
-        if (winnerSize < line.length && winnerSize+backupSize < line.length) {
+        if (winnerSize < line.length && winnerSize+backupSize < line.length && !winnerNumber.getText().equals("") && !backupNumber.getText().equals("")) {
 
             for (int i = 0; i < winnerSize; i++) {
                 ranNumber = random.nextInt(line.length);
@@ -77,6 +77,13 @@ public class MainWindowController {
 
             resultWindow();
 
+        }else if (winnerNumber.getText().equals("") || backupNumber.getText().equals("")) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Boş Giriş!");
+            alert.setTitle("Hata");
+            alert.setContentText("Talihli sayısı ve yedek talihli sayısı boş bırakılamaz!");
+            alert.showAndWait();
         } else if (winnerSize == line.length) {
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
