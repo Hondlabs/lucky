@@ -26,6 +26,7 @@ public class ResultWindowController {
         winners.appendText("-------------------------------------------------\n");
         winners.appendText(String.valueOf(MainWindowController.backupResult));
         MainWindowController.result.setLength(0);
+        MainWindowController.backupResult.setLength(0);
     }
 
     @FXML
