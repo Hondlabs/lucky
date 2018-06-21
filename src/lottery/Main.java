@@ -7,10 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.IOException;
-
 public class Main extends Application {
-    private Stage primaryStage ;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
