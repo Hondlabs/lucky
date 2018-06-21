@@ -21,11 +21,17 @@ public class MainWindowController {
 
     @FXML public ImageView closeBtn;
     @FXML public TextField newUser;
-
+    @FXML public TextField name;
+    @FXML public TextField winnerNumber;
+    @FXML public TextField backupNumber;
     @FXML private TextArea userList;
+
     public static StringBuilder result = new StringBuilder();
+    public static StringBuilder backupResult = new StringBuilder();
+    public static String lotteryNameString;
 
     public void draw() {
+        lotteryNameString = name.getText();
 
         try {
             Thread.sleep(100);
@@ -34,19 +40,35 @@ public class MainWindowController {
         }
 
         String[] line = userList.getText().split("\n");
+
         ArrayList<String> winners = new ArrayList<>();
+        ArrayList<String> backupWinners = new  ArrayList<>();
+
         Random random = new Random();
         int ranNumber;
 
-        int winnerSize = 3;
+        int winnerSize = Integer.parseInt(winnerNumber.getText());
+        int backupSize = Integer.parseInt(backupNumber.getText());
 
-        if (winnerSize < line.length) {
+        if (winnerSize < line.length && winnerSize+backupSize < line.length) {
+
             for (int i = 0; i < winnerSize; i++) {
                 ranNumber = random.nextInt(line.length);
                 if (!winners.contains(line[ranNumber])) {
                     winners.add(line[ranNumber]);
 
                     result.append(winners.get(i)).append("\n");
+                } else {
+                    i--;
+                }
+            }
+
+            for (int i = 0; i < backupSize; i++) {
+                ranNumber = random.nextInt(line.length);
+                if (!winners.contains(line[ranNumber]) && !backupWinners.contains(line[ranNumber])) {
+                    backupWinners.add(line[ranNumber]);
+
+                    backupResult.append(winners.get(i)).append("\n");
                 } else {
                     i--;
                 }
@@ -66,7 +88,7 @@ public class MainWindowController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Az Kişi!");
             alert.setTitle("Hata");
-            alert.setContentText("Seçilen kazanan sayısı girilen kişi sayısından fazla!");
+            alert.setContentText("Girilen kişi sayısı az!");
             alert.showAndWait();
         }
 

@@ -67,9 +67,9 @@
          </Label>
          <AnchorPane prefHeight="157.0" prefWidth="290.0">
             <children>
-               <TextField layoutX="42.0" prefHeight="29.0" prefWidth="206.0" promptText="Çekilişin Adı" style="-fx-background-color: transparent; -fx-border-insets: 0,5,0,0; -fx-border-color: #FFCF44; -fx-border-width: 0 0 2 0; -fx-text-fill: #FFCF44;" />
-               <TextField layoutX="42.0" layoutY="43.0" prefHeight="29.0" prefWidth="206.0" promptText="Seçilecek Asıl Talihli Sayısı" style="-fx-background-color: transparent; -fx-border-insets: 0,5,0,0; -fx-border-color: #FF6859; -fx-border-width: 0 0 2 0; -fx-text-fill: #FF6859;" />
-               <TextField layoutX="42.0" layoutY="86.0" prefHeight="29.0" prefWidth="206.0" promptText="Seçilecek Yedek Talihli Sayısı" style="-fx-background-color: transparent; -fx-border-insets: 0,5,0,0; -fx-border-color: #FFF9E4; -fx-border-width: 0 0 2 0; -fx-text-fill: #FFF9E4;" />
+               <TextField fx:id="name" layoutX="42.0" prefHeight="29.0" prefWidth="206.0" promptText="Çekilişin Adı" style="-fx-background-color: transparent; -fx-border-insets: 0,5,0,0; -fx-border-color: #FFCF44; -fx-border-width: 0 0 2 0; -fx-text-fill: #FFCF44;" />
+               <TextField fx:id="winnerNumber" layoutX="42.0" layoutY="43.0" prefHeight="29.0" prefWidth="206.0" promptText="Seçilecek Asıl Talihli Sayısı" style="-fx-background-color: transparent; -fx-border-insets: 0,5,0,0; -fx-border-color: #FF6859; -fx-border-width: 0 0 2 0; -fx-text-fill: #FF6859;" />
+               <TextField fx:id="backupNumber" layoutX="42.0" layoutY="86.0" prefHeight="29.0" prefWidth="206.0" promptText="Seçilecek Yedek Talihli Sayısı" style="-fx-background-color: transparent; -fx-border-insets: 0,5,0,0; -fx-border-color: #FFF9E4; -fx-border-width: 0 0 2 0; -fx-text-fill: #FFF9E4;" />
             </children>
             <VBox.margin>
                <Insets left="45.0" right="45.0" />
