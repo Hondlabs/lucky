@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #373540;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottery.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #373540;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottery.controllers.MainWindowController">
    <HBox alignment="TOP_RIGHT" layoutX="93.0" prefHeight="50.0" prefWidth="400.0" spacing="40.0" style="-fx-background-color: #28262F;" AnchorPane.bottomAnchor="633.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
          <Label text="Çekiliş Uygulaması" textFill="#0081ff">
@@ -28,7 +28,7 @@
             <children>
                <ImageView fitHeight="22.0" fitWidth="22.0">
                   <image>
-                     <Image url="@../minimize.png" />
+                     <Image url="@../../minimize.png" />
                   </image>
                   <cursor>
                      <Cursor fx:constant="HAND" />
@@ -39,7 +39,7 @@
                </ImageView>
                <ImageView fx:id="closeBtn" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#handleClose">
                   <image>
-                     <Image url="@../close.png" />
+                     <Image url="@../../close.png" />
                   </image>
                   <cursor>
                      <Cursor fx:constant="HAND" />
@@ -52,7 +52,7 @@
    <Label layoutX="226.0" layoutY="651.0" text="Developed by BeagleTeam" textFill="WHITE" AnchorPane.rightAnchor="10.0" />
    <ImageView fitHeight="100.0" fitWidth="149.0" layoutY="573.0">
       <image>
-         <Image url="@../logo.png" />
+         <Image url="@../../logo.png" />
       </image>
    </ImageView>
    <VBox layoutX="10.0" layoutY="277.0" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: #3A3843;">

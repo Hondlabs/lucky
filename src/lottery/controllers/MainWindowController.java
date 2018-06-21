@@ -1,22 +1,27 @@
-package lottery;
+package lottery.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 
-public class Controller {
+public class MainWindowController {
 
 
     @FXML public ImageView closeBtn;
@@ -52,7 +57,7 @@ public class Controller {
                 }
             }
 
-
+            //Silinecek FIXME: 21.06.2018
             Dialog<ButtonType> dialog = new Dialog<>();
             final DialogPane resultPane = dialog.getDialogPane();
             resultPane.setContentText("Kazananlar");
@@ -70,6 +75,9 @@ public class Controller {
 
             Button copy = new Button("Kopyala");
             copy.setTooltip(new Tooltip("Kopyala"));
+
+
+            //Taşınacak FIXME: 21.06.2018
             String finalResult = result.toString();
             copy.setOnAction(event -> {
                 ClipboardContent content = new ClipboardContent();
@@ -79,13 +87,14 @@ public class Controller {
             });
 
             copy.setPadding(new Insets(10));
-
+            /*Silinecek  FIXME: 21.06.2018
             GridPane root = new GridPane();
             root.setVisible(false);
             root.add(textArea, 0, 0);
             root.add(copy, 0, 2);
             resultPane.setExpandableContent(root);
-            dialog.showAndWait();
+            */
+            resultWindow();
         } else if (winnerSize == line.length) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Az Kişi!");
@@ -113,6 +122,29 @@ public class Controller {
     public void addUser(ActionEvent actionEvent) {
         userList.appendText(newUser.getText().trim()+"\n");
         newUser.setText("");
+    }
+
+    public void openNewWindow(){
+
+    }
+    public void resultWindow(){
+
+        try {
+            FXMLLoader loader = new FXMLLoader((getClass().getResource("/lottery/views/ResultWindowView.fxml")));
+            AnchorPane pane = loader.load();
+
+            Scene scene = new Scene(pane);
+
+            Stage resultStage = new Stage();
+            resultStage.setScene(scene);
+
+            resultStage.setTitle("Sonuçlar");
+            resultStage.initStyle(StageStyle.UNDECORATED);
+            resultStage.initModality(Modality.APPLICATION_MODAL);
+            resultStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

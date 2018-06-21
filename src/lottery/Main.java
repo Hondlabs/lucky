@@ -7,12 +7,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+
 public class Main extends Application {
+    private Stage primaryStage ;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        FXMLLoader loader = new FXMLLoader((getClass().getResource("/lottery/main.fxml")));
+        FXMLLoader loader = new FXMLLoader((getClass().getResource("/lottery/views/MainWindowView.fxml")));
         AnchorPane pane = loader.load();
 
         Scene scene = new Scene(pane);
@@ -23,6 +26,8 @@ public class Main extends Application {
         primaryStage.show();
 
     }
+
+
 
 
     public static void main(String[] args) {
