@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #373540;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottery.controllers.ResultWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #373540;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultWindowController">
    <HBox alignment="TOP_RIGHT" layoutX="93.0" prefHeight="50.0" prefWidth="400.0" spacing="90.0" style="-fx-background-color: #28262F;" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
          <Label text="Çekiliş Tamamlandı" textFill="#28ff00">
@@ -27,7 +27,7 @@
             <children>
                <ImageView fx:id="minBtn" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#handleMinified">
                   <image>
-                     <Image url="@../assets/minimize.png" />
+                     <Image url="@../images/minimize.png" />
                   </image>
                   <cursor>
                      <Cursor fx:constant="HAND" />
@@ -41,7 +41,7 @@
                </ImageView>
                <ImageView fx:id="closeBtn" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#handleClose" preserveRatio="true">
                   <image>
-                     <Image url="@../assets/close.png" />
+                     <Image url="@../images/close.png" />
                   </image>
                   <cursor>
                      <Cursor fx:constant="HAND" />

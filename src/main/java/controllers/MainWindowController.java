@@ -1,4 +1,4 @@
-package lottery.controllers;
+package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -123,11 +123,11 @@ public class MainWindowController {
     public void resultWindow(){
 
         try {
-            FXMLLoader loader = new FXMLLoader((getClass().getResource("/lottery/views/ResultWindowView.fxml")));
+            FXMLLoader loader = new FXMLLoader((getClass().getResource("../../resources/views/ResultWindowView.fxml")));
             AnchorPane pane = loader.load();
 
             Scene scene = new Scene(pane);
-            scene.getStylesheets().add("lottery/style.css");
+            scene.getStylesheets().add("../../resources/style.css");
 
             Stage resultStage = new Stage();
             resultStage.setScene(scene);

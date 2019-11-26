@@ -1,5 +1,3 @@
-package lottery;
-
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -16,11 +14,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        FXMLLoader loader = new FXMLLoader((getClass().getResource("/lottery/views/MainWindowView.fxml")));
+        FXMLLoader loader = new FXMLLoader((getClass().getResource("/views/MainWindowView.fxml")));
         AnchorPane pane = loader.load();
 
         Scene scene = new Scene(pane);
-        scene.getStylesheets().add("lottery/style.css");
+        scene.getStylesheets().add("/resources/styles/style.css");
         primaryStage.setScene(scene);
         primaryStage.getScene().setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
